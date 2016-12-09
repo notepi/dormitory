@@ -1,0 +1,9 @@
+<config>
+	<devicetype>30301</devicetype>
+    <Parser>^.*?anomaly\s+(.*?)\s+id\s+(\d+)\s+status\s+(\w+)\s+severity\s+(\d+)\s+classification\s+(\w+).*?"(.*)"\s+src\s+(\d+\.\d+\.\d+\.\d+)/(\d+).*?dst\s+(\d+\.\d+\.\d+\.\d+)/(\d+)\s+(\w+)\s+start\s+(\d+)-(\d+)-(\d+)\s+(\d+:\d+:\d+).*?duration\s+(\d+)\s+percent\s(\d+\.\d+)\s+rate\s+(.*)\s+rateUnit\s+(.*?)\s+protocol\s+(.*?)\s+flags.*?url\s+(.*?)$</Parser>
+    
+	 <Parser>^.*?anomaly\s+(.*?)\s+id\s+(\d+)\s+status\s+(\w+)\s+severity\s+(\d+)\s+classification\s+(\w+).*?"(.*)"\s+src\s+(\d+\.\d+\.\d+\.\d+)/(\d+).*?dst\s+(\d+\.\d+\.\d+\.\d+)/(\d+)\s+"(.*?)"\s+start\s+(\d+)-(\d+)-(\d+)\s+(\d+:\d+:\d+).*?duration\s+(\d+)\s+percent\s(\d+\.\d+)\s+rate\s+(.*)\s+rateUnit\s+(.*?)\s+protocol\s+(.*?)\s+flags.*?url\s+(.*?)\,.*?$</Parser>	
+	  <Parser>^.*?anomaly\s+(\w+)\s+id\s+(\d+)\s+status\s+(\w+)\s+severity\s+(\d+)\s+classification\s+(\w+).*?"(.*)"\s+src\s+(\d+\.\d+\.\d+\.\d+)/(\d+).*?dst\s+(\d+\.\d+\.\d+\.\d+)/(\d+)\s+"(.*?)"\s+start\s+(\d+)-(\d+)-(\d+)\s+(\d+:\d+:\d+).*?duration\s+(\d+)\s+percent\s(\d+\.\d+)\s+rate\s+(.*)\s+rateUnit\s+(.*?)\s+protocol\s+(.*?)\s+flags.*?url\s+(.*?)$</Parser>
+      
+      
+</config>

@@ -1,0 +1,88 @@
+
+=====
+===== LOGGING STARTED Fri Nov 25 10:19:47 CST 2016
+=====
+Exec: /home/emqttd/erts-7.3/bin/erlexec -boot /home/emqttd/releases/2.0/emqttd -mode embedded -boot_var ERTS_LIB_DIR /home/emqttd/erts-7.3/../lib -mnesia dir "/home/emqttd/data/mnesia/emqttd@127.0.0.1" -config /home/emqttd/data/configs/app.2016.11.25.10.19.48.config -args_file /home/emqttd/data/configs/vm.2016.11.25.10.19.48.args -vm_args /home/emqttd/data/configs/vm.2016.11.25.10.19.48.args -- console
+Root: /home/emqttd
+/home/emqttd
+Erlang/OTP 18 [erts-7.3] [source-d2a6d81] [64-bit] [async-threads:32] [hipe] [kernel-poll:true]
+
+starting emqttd on node 'emqttd@127.0.0.1'
+emqttd ctl is starting...[ok]
+emqttd hook is starting...[ok]
+emqttd router is starting...[ok]
+emqttd pubsub is starting...[ok]
+emqttd stats is starting...[ok]
+emqttd metrics is starting...[ok]
+emqttd pooler is starting...[ok]
+emqttd trace is starting...[ok]
+emqttd client manager is starting...[ok]
+emqttd session manager is starting...[ok]
+emqttd session supervisor is starting...[ok]
+emqttd wsclient supervisor is starting...[ok]
+emqttd broker is starting...[ok]
+emqttd alarm is starting...[ok]
+emqttd mod supervisor is starting...[ok]
+emqttd bridge supervisor is starting...[ok]
+emqttd access control is starting...[ok]
+emqttd system monitor is starting...[ok]
+dashboard:http listen on 0.0.0.0:18083 with 2 acceptors.
+mqtt:tcp listen on 0.0.0.0:1883 with 8 acceptors.
+mqtt:ssl listen on 0.0.0.0:8883 with 4 acceptors.
+mqtt:ws listen on 0.0.0.0:8083 with 4 acceptors.
+mqtt:wss listen on 0.0.0.0:8084 with 4 acceptors.
+Erlang MQTT Broker 2.0 is running now
+Eshell V7.3  (abort with ^G)
+(emqttd@127.0.0.1)1> 
+===== ALIVE Fri Nov 25 10:34:52 CST 2016
+
+===== ALIVE Fri Nov 25 10:49:52 CST 2016
+
+===== ALIVE Fri Nov 25 11:04:52 CST 2016
+
+===== ALIVE Fri Nov 25 11:19:52 CST 2016
+
+===== ALIVE Fri Nov 25 11:34:52 CST 2016
+
+===== ALIVE Fri Nov 25 11:49:53 CST 2016
+
+===== ALIVE Fri Nov 25 12:04:53 CST 2016
+
+=====
+===== LOGGING STARTED Fri Nov 25 16:06:27 CST 2016
+=====
+Exec: /home/emqttd/erts-7.3/bin/erlexec -boot /home/emqttd/releases/2.0/emqttd -mode embedded -boot_var ERTS_LIB_DIR /home/emqttd/erts-7.3/../lib -mnesia dir "/home/emqttd/data/mnesia/emqttd@127.0.0.1" -config /home/emqttd/data/configs/app.2016.11.25.16.06.29.config -args_file /home/emqttd/data/configs/vm.2016.11.25.16.06.29.args -vm_args /home/emqttd/data/configs/vm.2016.11.25.16.06.29.args -- console
+Root: /home/emqttd
+/home/emqttd
+Erlang/OTP 18 [erts-7.3] [source-d2a6d81] [64-bit] [async-threads:32] [hipe] [kernel-poll:true]
+
+starting emqttd on node 'emqttd@127.0.0.1'
+emqttd ctl is starting...[ok]
+emqttd hook is starting...[ok]
+emqttd router is starting...[ok]
+emqttd pubsub is starting...[ok]
+emqttd stats is starting...[ok]
+emqttd metrics is starting...[ok]
+emqttd pooler is starting...[ok]
+emqttd trace is starting...[ok]
+emqttd client manager is starting...[ok]
+emqttd session manager is starting...[ok]
+emqttd session supervisor is starting...[ok]
+emqttd wsclient supervisor is starting...[ok]
+emqttd broker is starting...[ok]
+emqttd alarm is starting...[ok]
+emqttd mod supervisor is starting...[ok]
+emqttd bridge supervisor is starting...[ok]
+emqttd access control is starting...[ok]
+emqttd system monitor is starting...[ok]
+dashboard:http listen on 0.0.0.0:18083 with 2 acceptors.
+16:06:35.889 [error] [error] mqtt:tcp failed to listen on 1883 - eaddrinuse (address already in use)
+16:06:35.889 [error] CRASH REPORT Process <0.1069.0> with 0 neighbours exited with reason: {cannot_listen,1883,eaddrinuse} in gen_server:init_it/6 line 344
+16:06:35.894 [error] CRASH REPORT Process <0.926.0> with 0 neighbours exited with reason: no match of right hand value {error,{{'EXIT',{{badmatch,{error,{{cannot_listen,1883,eaddrinuse},{child,undefined,listener,{esockd_listener,start_link,['mqtt:tcp',1883,[{connopts,[]},{sockopts,[binary,{packet,raw},{reuseaddr,true},{backlog,1024},{nodelay,true}]},{acceptors,8},{max_clients,1024}],<0.1068.0>,{gen_logger,error_logger_logger,2}]},transient,4294967295,worker,[esockd_listener]}}}},[{esockd_listener_sup,start_link,4,[{file,"src/esockd_listener_sup.erl"},{line,62}]},{supervisor,do_start_child,2,[{file,"supervi..."},...]},...]}},...}} in emqttd_app:start_listener/3 line 181 in application_master:init/4 line 134
+stopped dashboard:http on 0.0.0.0:18083
+[os_mon] memory supervisor port (memsup): Erlang has closed
+[os_mon] cpu supervisor port (cpu_sup): Erlang has closed
+{"Kernel pid terminated",application_controller,"{application_start_failure,emqttd,{bad_return,{{emqttd_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{'EXIT',{{badmatch,{error,{{cannot_listen,1883,eaddrinuse},{child,undefined,listener,{esockd_listener,start_link,['mqtt:tcp',1883,[{connopts,[]},{sockopts,[binary,{packet,raw},{reuseaddr,true},{backlog,1024},{nodelay,true}]},{acceptors,8},{max_clients,1024}],<0.1068.0>,{gen_logger,error_logger_logger,2}]},transient,4294967295,worker,[esockd_listener]}}}},[{esockd_listener_sup,start_link,4,[{file,\"src/esockd_listener_sup.erl\"},{line,62}]},{supervisor,do_start_child,2,[{file,\"supervisor.erl\"},{line,358}]},{supervisor,handle_start_child,2,[{file,\"supervisor.erl\"},{line,717}]},{supervisor,handle_call,3,[{file,\"supervisor.erl\"},{line,415}]},{gen_server,try_handle_call,4,[{file,\"gen_server.erl\"},{line,629}]},{gen_server,handle_msg,5,[{file,\"gen_server.erl\"},{line,661}]},{proc_lib,init_p_do_apply,3,[{file,\"proc_lib.erl\"},{line,240}]}]}},{child,undefined,{listener_sup,{'mqtt:tcp',1883}},{esockd_listener_sup,start_link,['mqtt:tcp',1883,[{connopts,[]},{sockopts,[binary,{packet,raw},{reuseaddr,true},{backlog,1024},{nodelay,true}]},{acceptors,8},{max_clients,1024}],{emqttd_client,start_link,[[{max_clientid_len,1024},{max_packet_size,65536},{client_idle_timeout,30}]]}]},transient,infinity,supervisor,[esockd_listener_sup]}}}},[{emqttd_app,start_listener,3,[{file,\"src/emqttd_app.erl\"},{line,181}]},{lists,foreach,2,[{file,\"lists.erl\"},{line,1337}]},{emqttd_app,start,2,[{file,\"src/emqttd_app.erl\"},{line,52}]},{application_master,start_it_old,4,[{file,\"application_master.erl\"},{line,273}]}]}}}}}"}
+
+Crash dump is being written to: log/crash.dump...done
+Kernel pid terminated (application_controller) ({application_start_failure,emqttd,{bad_return,{{emqttd_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{'EXIT',{{badmatch,{error,{{cannot_listen,188

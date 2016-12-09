@@ -1,0 +1,34 @@
+2016-11-25 16:06:35 =ERROR REPORT====
+[error] mqtt:tcp failed to listen on 1883 - eaddrinuse (address already in use)
+2016-11-25 16:06:35 =CRASH REPORT====
+  crasher:
+    initial call: esockd_listener:init/1
+    pid: <0.1069.0>
+    registered_name: []
+    exception exit: {{cannot_listen,1883,eaddrinuse},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,344}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,240}]}]}
+    ancestors: [<0.1066.0>,esockd_sup,<0.887.0>]
+    messages: []
+    links: [<0.1066.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 540
+  neighbours:
+2016-11-25 16:06:35 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.926.0>
+    registered_name: []
+    exception exit: {{bad_return,{{emqttd_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{'EXIT',{{badmatch,{error,{{cannot_listen,1883,eaddrinuse},{child,undefined,listener,{esockd_listener,start_link,['mqtt:tcp',1883,[{connopts,[]},{sockopts,[binary,{packet,raw},{reuseaddr,true},{backlog,1024},{nodelay,true}]},{acceptors,8},{max_clients,1024}],<0.1068.0>,{gen_logger,error_logger_logger,2}]},transient,4294967295,worker,[esockd_listener]}}}},[{esockd_listener_sup,start_link,4,[{file,"src/esockd_listener_sup.erl"},{line,62}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,358}]},{supervisor,handle_start_child,2,[{file,"supervisor.erl"},{line,717}]},{supervisor,handle_call,3,[{file,"supervisor.erl"},{line,415}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,629}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,661}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,240}]}]}},{child,undefined,{listener_sup,{'mqtt:tcp',1883}},{esockd_listener_sup,start_link,['mqtt:tcp',1883,[{connopts,[]},{sockopts,[binary,{packet,raw},{reuseaddr,true},{backlog,1024},{nodelay,true}]},{acceptors,8},{max_clients,1024}],{emqttd_client,start_link,[[{max_clientid_len,1024},{max_packet_size,65536},{client_idle_timeout,30}]]}]},transient,infinity,supervisor,[esockd_listener_sup]}}}},[{emqttd_app,start_listener,3,[{file,"src/emqttd_app.erl"},{line,181}]},{lists,foreach,2,[{file,"lists.erl"},{line,1337}]},{emqttd_app,start,2,[{file,"src/emqttd_app.erl"},{line,52}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,273}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,134}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,240}]}]}
+    ancestors: [<0.925.0>]
+    messages: [{'EXIT',<0.927.0>,normal}]
+    links: [<0.925.0>,<0.800.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 219
+  neighbours:
